@@ -56,6 +56,10 @@ public class Job {
     public void setWaitedTime(int waitedTime) {
         this.waitedTime = waitedTime;
     }
+    
+    public void incrementWaitedTime() {
+        this.waitedTime++;
+    }
 
     public void setIsDrop(boolean isDrop) {
         this.isDrop = isDrop;

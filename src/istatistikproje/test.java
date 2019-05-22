@@ -1,8 +1,4 @@
 package istatistikproje;
-import java.util.Random;
-import org.apache.commons.math3.distribution.GammaDistribution;
-import org.apache.commons.math3.distribution.PoissonDistribution;
-import org.apache.commons.math3.distribution.ExponentialDistribution;
 
 /**
  *
@@ -17,37 +13,15 @@ public class test {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         
-        LinkedListQueue<String> llQueue = new LinkedListQueue<>();
-         
-        llQueue.printList();
-         
-        llQueue.dequeue();
-         
-        llQueue.enqueue("data1");
-         
-        llQueue.printList();
+        System.out.println("-----------------------");
         
-        int pois = new PoissonDistribution(300).sample();
-        System.out.println("Poisson 2: " + pois);
+        System.out.println("System start work..");
+        Sistem s1 = new Sistem();
+        System.out.println("System stoped.");
         
-        double denemee = new ExponentialDistribution(Math.pow(0.3, -1)).sample();
-        System.out.println("Exponential: " + denemee);
+        System.out.println("-----------------------");
         
-        int denemeee = getUniformRandom(4,9);
-        System.out.println("Uniform: " + denemeee);
-        
-        double sample = new GammaDistribution(7, Math.pow(3, -1)).sample();
-        System.out.println("Gamma: " + Math.round(sample));
-        
-        double samplee = new GammaDistribution(5, Math.pow(2, -1)).sample();
-        System.out.println("Gamma: " + Math.round(samplee));
     }
-    
-    private static int getUniformRandom(int min, int max) {
-        Random r = new Random();
-        return r.nextInt(max-min) + min;
-    }
-    
 }
