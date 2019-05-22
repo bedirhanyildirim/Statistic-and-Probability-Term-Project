@@ -32,6 +32,14 @@ public class Sistem {
         this.start();
     }
 
+    public ArrayList<Job> getFinishedJobs() {
+        return finishedJobs;
+    }
+
+    public ArrayList<Job> getDropedJobs() {
+        return dropedJobs;
+    }
+
     public int getShift() {
         return shift;
     }

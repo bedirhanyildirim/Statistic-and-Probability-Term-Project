@@ -18,7 +18,8 @@ public class test {
         System.out.println("-----------------------");
         
         System.out.println("System start work..");
-        Sistem s1 = new Sistem();
+        MonteCarlo monteCarlo = new MonteCarlo(3);
+        monteCarlo.start();
         System.out.println("System stoped.");
         
         System.out.println("-----------------------");
